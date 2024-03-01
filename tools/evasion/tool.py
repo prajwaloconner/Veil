@@ -416,12 +416,11 @@ class Tools:
                     if key in selected_payload.required_options:
                         # Validate LHOST value
                         if key == "LHOST":
-                            if helpers.validate_ip(value):
-                                selected_payload.required_options[key][0] = value
-                            else:
-                                print()
-                                print(helpers.color(" [!] ERROR: You did not provide a valid IP!", warning=True))
-                                print()
+                            selected_payload.required_options[key][0] = value
+                            #else:
+                             #   print()
+                              #  print(helpers.color(" [!] ERROR: You did not provide a valid IP!", warning=True))
+                               # print()
                         # Validate LPORT
                         elif key == "LPORT":
                             if helpers.validate_port(value):
